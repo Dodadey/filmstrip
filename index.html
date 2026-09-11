@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Filmstrip</title>
+
+<!-- viewport-fit=cover lets the app paint under the iPhone's rounded corners -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#182629">
+<meta name="description" content="Rank four films at a time until a favourites list falls out.">
+
+<!-- iOS home-screen behaviour -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Filmstrip">
+<link rel="apple-touch-icon" href="./icon-192.png">
+
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icon-192.png">
+
+<style>
+  html, body { margin: 0; padding: 0; background: #182629; }
+  body {
+    /* keep content clear of the notch and the home indicator */
+    padding: env(safe-area-inset-top) env(safe-area-inset-right)
+             env(safe-area-inset-bottom) env(safe-area-inset-left);
+    -webkit-text-size-adjust: 100%;
+    overscroll-behavior-y: contain;
+  }
+  #root { min-height: 100vh; }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="./app.js"></script>
+</body>
+</html>
